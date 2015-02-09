@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+   "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+   "http://struts.apache.org/dtds/struts-2.0.dtd">
+<struts>
+   <constant name="struts.devMode" value="true" />
+   <package name="default" extends="struts-default">
+       <action name="">
+        	<result>/index.html</result>
+    	</action>
+       	<action name="addnews" class="org.iiitb.sis.action.admin.NewsAction" method="addNews">
+         <result name="success">/addNews.jsp</result>
+         <result name="error">/addNews.jsp</result>
+     	</action>
+     	<action name="deletenews" class="org.iiitb.sis.action.admin.NewsAction" method="deleteNews">
+        	<result name="success" type="redirectAction">
+        		<param name="actionName">news</param>
+        		<param name="msg">true</param>
+        	</result>
+         	<result name="error">/deleteNews.jsp</result>
+     	</action>
+     	<action name="news" class="org.iiitb.sis.action.admin.NewsAction" method="fetchNews">
+         <result name="success">/deleteNews.jsp</result>
+         <result name="error">/deleteNews.jsp</result>
+     	</action>
+   </package>
+</struts>

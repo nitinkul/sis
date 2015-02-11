@@ -28,7 +28,7 @@ public class NewsAction extends ActionSupport {
 	
 	public String fetchNews(){
 		System.out.println("fetchNews()");
-		newsList = item.getNews();
+		setNewsList(item.getNews());
 		System.out.println("successful in fetching news");
 		return SUCCESS;
 	}

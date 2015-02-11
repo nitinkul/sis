@@ -38,6 +38,7 @@
 </script>
 <style type="text/css">
 .modalBlock {
+	overflow: visible;
 	display: block;
 	position: relative;
 }
@@ -92,9 +93,7 @@
 			
 			</div>
 		</div>
+		<div> <%@ include file="campusNews.jsp" %></div>
 	</div>
-
-
-
 </body>
 </html>
